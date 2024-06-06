@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Summarizer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 1000px;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        overflow: hidden;
+    }
+    .menu-card {
+        width: 300px;
+        background-color: #764ba2;
+        padding: 30px;
+        color: #fff;
+    }
+    .menu-card h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .menu-card select {
+        width: 100%;
+        padding: 1222px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #9575cd;
+        color: #fff;
+    }
+    .menu-card button {
+        width: 100%;
+        padding: 12px 20px;
+        background-color: #3553b2; /* Different color for the Summarize button */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .menu-card button:hover {
+        background-color: #ff5247; /* Darker shade on hover */
+    }
+    .text-area {
+        flex: 1;
+        padding: 30px;
+    }
+    textarea {
+        width: calc(100% - 30px); /* Adjusted width to account for padding */
+        height: 200px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        resize: none;
+        font-size: 16px;
+    }
+    .summary {
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu-card">
+        <h3>Summarization Options</h3>
+        <div class="options">
+            <label for="summaryType">Summary Type:</label>
+            <select id="summaryType">
+                <option value="paragraph">Paragraph</option>
+                <option value="bulletPoints">Bullet Points</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="options">
+            <label for="summaryLength">Summary Length:</label>
+            <select id="summaryLength">
+                <option value="short">Short</option>
+                <option value="long">Long</option>
+            </select>
+        </div>
+        <button onclick="summarize()">Summarize</button>
+    </div>
+    <div class="text-area">
+        <h2>Text Summarizer</h2>
+        <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+        <div class="summary" id="summary"></div>
+    </div>
+</div>
+
+<script>
+    function summarize() {
+        var inputText = document.getElementById("inputText").value;
+        var summaryType = document.getElementById("summaryType").value;
+        var summaryLength = document.getElementById("summaryLength").value;
+        
+        // Implement summarization logic based on summaryType and summaryLength
+        // For now, let's just display the input text as it is
+        var summaryText = inputText;
+        
+        document.getElementById("summary").innerText = summaryText;
+    }
+</script>
+
+</body>
+</html>

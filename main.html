@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff; 
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .container {
+            background: linear-gradient(135deg, #3f5efb, #fc466b);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1 1 45%; 
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 220px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container:nth-child(1) {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+        .container:nth-child(2) {
+            background: linear-gradient(135deg, #373b44, #4286f4);
+        }
+        .container:nth-child(3) {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+        .container:nth-child(4) {
+            background: linear-gradient(135deg, #283c86, #45a247);
+        }
+        .container:nth-child(5) {
+            background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+        }
+        .container:nth-child(6) {
+            background: linear-gradient(135deg, #654ea3, #eaafc8);
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .container h2 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .container h2 i {
+            margin-right: 10px;
+        }
+        .container p {
+            color: #eaeaea;
+        }
+        .container button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .container button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        Suvidha Foundation
+    </header>
+    <div class="dashboard">
+        <div class="container">
+            <h2><i class="fas fa-spell-check"></i> Grammar Checker</h2>
+            <p>Improve your writing with advanced grammar checking.</p>
+            <button onclick="window.location.href='grammar_checker.html'">Try Now</button>
+        </div>
+        <div class="container">
+            <h2><i class="fas fa-file-alt"></i> Summarizer</h2>
+            <p>Summarize long texts or articles instantly.</p>
+            <button onclick="window.location.href='summarizer.html'">Try Now</button>
+        </div>
+        <div class="container">
+            <h2><i class="fas fa-brain"></i> AI Detector</h2>
+            <p>Detect and prevent AI-generated content.</p>
+            <button onclick="window.location.href='ai_detector.html'">Try Now</button>
+        </div>
+        <div class="container">
+            <h2><i class="fas fa-copy"></i> Plagiarism Checker</h2>
+            <p>Ensure originality by detecting plagiarized content.</p>
+            <button onclick="window.location.href='plagiarism_checker.html'">Try Now</button>
+        </div>
+        <div class="container">
+            <h2><i class="fas fa-language"></i> Translator</h2>
+            <p>Translate text between multiple languages.</p>
+            <button onclick="window.location.href='translator.html'">Try Now</button>
+        </div>
+        <div class="container">
+            <h2><i class="fas fa-file-signature"></i> Citation</h2>
+            <p>Generate citations and bibliographies effortlessly.</p>
+            <button onclick="window.location.href='citation.html'">Try Now</button>
+        </div>
+    </div>
+</body>
+</html>
